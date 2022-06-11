@@ -1,0 +1,11 @@
+prefix=@prefix@
+exec_prefix=${prefix}
+libdir=@libdir@
+includedir=@includedir@
+
+Name: Navigation
+Description: OSSO Navigation library
+Version: @PACKAGE_VERSION@
+Requires: glib-2.0 dbus-glib-1 gdk-pixbuf-2.0 gmodule-2.0 gconf-2.0 libxml-2.0
+Libs: -L${libdir} -lnavigation
+Cflags: -I${includedir}
