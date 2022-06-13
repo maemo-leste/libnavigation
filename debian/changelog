@@ -1,0 +1,199 @@
+libnavigation (0.106) unstable; urgency=low
+
+    * Initial Leste release
+
+ -- Ivaylo Dimitrov <ivo.g.dimitrov.75@gmail.com>  Sat, 11 Jun 2022 17:23:43 +0300
+
+libnavigation (0.105-1+0m5) unstable; urgency=low
+
+  * This entry has been added by BIFH queue processor
+    Suffix +0m5 added to package revision
+
+ -- Chetak Marulasiddappa <ext-chetak.marulasiddappa@nokia.com>  Tue, 16 Feb 2010 12:39:02 +0200
+
+libnavigation (0.105-1) unstable; urgency=low
+
+  * Fixes: NB#156190 - Infinite loop when trying to open a contact address
+    without internet connectivity
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Thu, 11 Feb 2010 12:46:28 +0200
+
+libnavigation (0.104-1) unstable; urgency=low
+
+  * Fixes: NB#139418 - Authentication token needs to be taken into use when
+    using REST server
+  * Added support for country name coming from navigation provider
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Fri, 08 Jan 2010 15:39:52 +0200
+
+libnavigation (0.103-1) unstable; urgency=low
+
+  * Fixes: NB#149467 - critical warning when using
+    navigation_provider_address_to_location()
+  * Performance update by removing unnecessary GET_PRIVATE() calls
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Mon, 07 Dec 2009 13:04:42 +0200
+
+libnavigation (0.102-1) unstable; urgency=low
+
+  * Fixes: NB#128775 - sometimes "select connection" dialog is poped up
+    repeatedly if none is selected, refraining the usage of camera app 
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Tue, 01 Sep 2009 16:40:53 +0300
+
+libnavigation (0.101-1) unstable; urgency=low
+
+  * Fixes: NB#127166 - resolving long/lat does not use enough caching,
+    and also insists on network connection
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Wed, 22 Jul 2009 15:00:17 +0300
+
+libnavigation (0.100-2) unstable; urgency=low
+
+  * Added dependecy for libcityinfo-dev 
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Thu, 11 Jun 2009 15:06:05 +0300
+
+libnavigation (0.100-1) unstable; urgency=low
+
+  * Updated navigation_provider_request_pixbuf_from_map() api to match
+    changes in navigation provider api
+  * Added localized country name into reverse geocoding
+  * Fixes: NB#118029 - In reverse geo coding country name is not available 
+  * Fixes: NB#118118 - navigation-provider does not export a symbol for
+    "navigation-error-quark" or its actual quark
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Thu, 11 Jun 2009 09:03:36 +0300
+
+libnavigation (0.99-2) unstable; urgency=low
+
+  * Exported the libnavigation error quark
+  * Fixes: NB#118118 - navigation-provider does not export a symbol for
+    "navigation-error-quark" or its actual quark
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Wed, 27 May 2009 15:34:46 +0300
+
+libnavigation (0.99-1) unstable; urgency=low
+
+  * Added cache for reverse geocoding, this partly fixes bug NB#107011
+  * Updated documentation
+  * Fixes: NB#113303 - Memory leak in libnavigation
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Wed, 29 Apr 2009 09:28:11 +0300
+
+libnavigation (0.98-2) unstable; urgency=low
+
+  * Fixes: NB#107011 - Location related system activity while idle, sometimes
+    busylooping
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Thu, 26 Mar 2009 10:39:45 +0200
+
+libnavigation (0.98-1) unstable; urgency=low
+
+  * Added limit for pending calls so that one application cant flood navigation
+    provider with requests.
+  * Fixed some race conditions and memory leaks.
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Wed, 25 Mar 2009 16:18:11 +0200
+
+libnavigation (0.97-1) unstable; urgency=low
+
+  * Fixed some possible memory leaks.
+  * Changed ShowPlacesPOICategories parameters to match better other show methods. 
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Mon, 23 Feb 2009 16:08:24 +0200
+
+libnavigation (0.96-1) unstable; urgency=low
+
+  * Removed unnecessary limit of only one geocoding or reverse geocoding call
+    from application.
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Fri, 23 Jan 2009 12:07:21 +0200
+
+libnavigation (0.95-1) unstable; urgency=low
+
+  * Added support of missing Show*, GetPOICategories and GetLocationFromMap methods. 
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Wed, 14 Jan 2009 17:56:36 +0200
+
+libnavigation (0.94-1) unstable; urgency=low
+
+  * Updated D-Bus apis and removed unsupported functionality. 
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Wed, 07 Jan 2009 12:32:46 +0200
+
+libnavigation (0.93-1) unstable; urgency=low
+
+  * Changed geocoding and reverse geocoding to asynchronous.
+  * Removed geocoding and reverse gocoding functions that return multiple
+    values.
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Thu, 02 Oct 2008 14:03:18 +0300
+
+libnavigation (0.92-1) unstable; urgency=low
+
+  * Added functions to convert pixel coordinates to geographical coordinates
+    and vice versa.
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Tue, 15 Jul 2008 15:48:33 +0300
+
+libnavigation (0.91-1) unstable; urgency=low
+
+  * Geocoding and reverse geocoding can now return multiple matches.
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Wed, 09 Jul 2008 15:33:49 +0300
+
+libnavigation (0.90-3) unstable; urgency=low
+
+  * Added dependency to gtk-doc-tools
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Tue, 08 Jul 2008 17:32:16 +0300
+
+libnavigation (0.90-2) unstable; urgency=low
+
+  * Updated rules to run autogen.sh
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Tue, 08 Jul 2008 13:45:49 +0300
+
+libnavigation (0.90-1) unstable; urgency=low
+
+  * Updated packaging for the base release
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Mon, 07 Jul 2008 15:02:47 +0300
+
+libnavigation (0.4.2) unstable; urgency=low
+
+  * Added function to make libnavigation resident.
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Mon, 23 Jun 2008 14:06:51 +0300
+
+libnavigation (0.4.1) unstable; urgency=low
+
+  * Included GConf schemas in the package.
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Tue, 17 Jun 2008 15:41:44 +0300
+
+libnavigation (0.4) unstable; urgency=low
+
+  * Split ngeo-provider into nokiamaps-navigation-provider package.
+  * Also build documentation package.
+
+ -- Quanyi Sun <Quanyi.Sun@nokia.com>  Mon, 16 Jun 2008 14:38:33 +0300
+
+libnavigation (0.3) unstable; urgency=low
+
+  * Included ngeo-provider.
+
+ -- Mikko Korpelainen <mikko.korpelainen@nokia.com>  Fri,  9 May 2008 17:03:42 +0300
+
+libnavigation (0.2) unstable; urgency=low
+
+  * API for map and route options.
+
+ -- Mikko Korpelainen <mikko.korpelainen@nokia.com>  Fri,  9 May 2008 13:21:04 +0300
+
+libnavigation (0.1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Mikko Korpelainen <mikko.korpelainen@nokia.com>  Fri, 15 Feb 2008 17:27:08 +0200

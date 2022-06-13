@@ -27,6 +27,19 @@ G_BEGIN_DECLS
 #define NAVIGATION_PROVIDER(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), NAVIGATION_TYPE_PROVIDER, NavigationProvider))
 #define NAVIGATION_IS_PROVIDER(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), NAVIGATION_TYPE_PROVIDER))
 
+struct _NavigationProvider
+{
+  GObject parent;
+};
+
+typedef struct _NavigationProvider NavigationProvider;
+
+struct _NavigationProviderClass
+{
+  GObjectClass parent_class;
+};
+
+typedef struct _NavigationProviderClass NavigationProviderClass;
 
 #define NAVIGATION_HOUSE_NUMBER		"house_number"
 #define NAVIGATION_HOUSE_NAME		"house_name"
@@ -139,16 +152,6 @@ typedef struct _NavigationMap {
 	gint            px_width;
 	gint            px_height;
 } NavigationMap;
-
-typedef struct _NavigationProviderPrivate NavigationProviderPrivate;
-
-typedef struct _NavigationProvider {
-	GObject parent;
-} NavigationProvider;
-
-typedef struct _NavigationProviderClass {
-	GObjectClass parent_class;
-} NavigationProviderClass;
 
 /**
  * navigation_provider_new_default:

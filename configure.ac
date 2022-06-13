@@ -27,6 +27,11 @@ PKG_CHECK_MODULES(NAVIGATION, [dbus-glib-1 gtk+-2.0 gdk-pixbuf-2.0 gmodule-2.0 g
 
 AC_PATH_PROG(DBUS_BINDING_TOOL, dbus-binding-tool)
 
+AM_GCONF_SOURCE_2
+AC_PATH_PROG(GCONFTOOL, gconftool-2)
+
+GTK_DOC_CHECK([1.3])
+
 #+++++++++++++++++++
 # Directories setup
 #+++++++++++++++++++
@@ -58,6 +63,7 @@ AC_DEFINE_UNQUOTED([G_LOG_DOMAIN], "lib$PACKAGE_NAME", [Default logging facility
 AC_OUTPUT([
 	Makefile
 	navigation/Makefile
+	doc/Makefile
 	navigation.pc
 ])
 

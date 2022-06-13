@@ -17,6 +17,13 @@
  *
  */
 
+/**
+ * SECTION:navigation-provider
+ * @short_description: a representation of an navigation provider.
+ *
+ * An #NavigationProvider is an object which represents a navigation provider.
+ */
+
 #include "config.h"
 
 #include <dbus/dbus-glib-lowlevel.h>
@@ -38,7 +45,6 @@ struct _NavigationProviderPrivate
   DBusGConnection *gdbus;
   DBusGProxy *proxy;
   DBusConnection *dbus;
-  int field_10;
   GHashTable *requests;
 };
 

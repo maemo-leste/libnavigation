@@ -1,0 +1,40 @@
+Source: libnavigation
+Priority: optional
+Maintainer: Ivaylo Dimitrov <ivo.g.dimitrov.75@gmail.com>
+Build-Depends:
+ debhelper (>= 11),
+ libglib2.0-dev,
+ libxml2-dev,
+ libgconf2-dev,
+ iso-codes,
+ libgtk2.0-dev,
+ libdbus-glib-1-dev,
+ libgdk-pixbuf2.0-dev
+Section: libs
+Standards-Version: 4.3.0
+
+Package: libnavigation0
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: OSSO navigation library
+ Library providing an API to use the Map application.
+
+Package: libnavigation-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libnavigation0 (= ${binary:Version}),
+ ${misc:Depends}
+Description: Development files for libnavigation
+ Development files for libnavigation.
+
+Package: libnavigation-doc
+Section: doc
+Architecture: all
+Description: Documentation for the OSSO navigation library
+ Library providing an API to use the Map application.
+ .
+ Contains the library reference

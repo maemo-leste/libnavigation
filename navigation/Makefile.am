@@ -28,6 +28,9 @@ navigation-provider-client-glue.h: navigation-provider.xml
 xmldir = $(docdir)
 xml_DATA = navigation-provider.xml
 
+schemasdir = $(GCONF_SCHEMA_FILE_DIR)
+schemas_DATA = libnavigation.schemas
+
 CLEANFILES = $(BUILT_SOURCES)
 
 MAINTAINERCLEANFILES = Makefile.in
